@@ -1,0 +1,18 @@
+<div class="jumbotron">
+<h1><strong>LAPTOP CUSTOMER SERVICE PORTAL</strong></h1>
+</div>
+
+<br>
+
+<div class="card text-center">
+    <div class="card-header">
+      Homepage
+    </div>
+    <div class="card-body">
+      <p class="card-text">Sign in and create a ticket. <br> We will contact you as soon as possible.</p>
+      <a class="btn btn-primary" routerLink="/login" *ngIf="!loggedIn">Sign in</a>
+      <div class="alert alert-success" role="alert" *ngIf="loggedIn">
+        <h4 class="alert-heading">You are signed in.</h4>
+      </div>
+    </div>
+  </div>

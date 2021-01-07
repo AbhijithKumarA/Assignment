@@ -1,0 +1,26 @@
+
+table {
+    font-size: 20px;
+}
+
+.thick {
+    border-width: thick;
+    border-color: black;
+}
+
+.in {
+    width: 100%;
+}
+
+tbody {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.form-row .col-sm-10 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    font-size: larger;
+}
+
+.click {
+    cursor: pointer;
+}

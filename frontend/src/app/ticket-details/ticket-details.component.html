@@ -1,0 +1,112 @@
+<h1>Ticket Details</h1>
+
+<br />
+
+<form ngForm #f="ngForm">
+  <div class="form-row">
+    <label class="col-form-label" for="ticketid"><b>Ticket ID:</b></label>
+    <div class="col-sm-10">
+      <input
+        ngModel
+        name="ticketid"
+        #ticketid="ngModel"
+        [(ngModel)]="createservice.ticketDetails.ticketid"
+        id="ticketid"
+        type="text"
+        class="form-control-plaintext"
+        readonly
+      />
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="form-row">
+    <label class="col-form-label" for="summary"><b>Summary:</b></label>
+    <div class="col-sm-10">
+      <input
+        ngModel
+        name="summary"
+        #summary="ngModel"
+        [(ngModel)]="createservice.ticketDetails.summary"
+        id="summary"
+        type="text"
+        class="form-control-plaintext"
+        readonly
+      />
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="form-row">
+    <label class="col-form-label" for="description"><b>Description:</b></label>
+    <div class="col-sm-10">
+      <textarea
+        ngModel
+        name="description"
+        #description="ngModel"
+        [(ngModel)]="createservice.ticketDetails.description"
+        id="description"
+        type="text"
+        rows="auto"
+        class="form-control-plaintext"
+        readonly
+      >
+      </textarea>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="form-row">
+    <label class="col-form-label" for="complaintType"
+      ><b>Complaint Type:</b></label
+    >
+    <div class="col-sm-10">
+      <input
+        ngModel
+        name="complaintType"
+        #complaintType="ngModel"
+        [(ngModel)]="createservice.ticketDetails.complaintType"
+        id="complaintType"
+        type="text"
+        class="form-control-plaintext"
+        readonly
+      />
+    </div>
+  </div>
+</form>
+
+<hr class="thick" />
+
+<table>
+  <thead>
+    <tr>
+      <b><i class="fa fa-comments"></i> Comments:</b>
+    </tr>
+  </thead>
+
+  <tbody style="width: 100%;">
+    <tr *ngFor="let com of service.commentList">
+      <td style="width: 90%;">
+        {{ com.commentText }}
+        <hr class="in" />
+      </td>
+      <td class="click" style="width: 5%; text-align: center;" (click)="populateComment(com)">
+        <img src="/assets/edit-icon.svg" alt="edit-icon">
+        <hr class="in" />
+      </td>
+      <td class="click" style="width: 5%; text-align: center;">
+        <i class="fa fa-times-circle fa-sm text-danger" (click)="onDelete(com.commentId)"></i>
+        <hr class="in" />
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<hr class="thick" />
+
+<app-add-comment></app-add-comment>
+<br>
+<br>

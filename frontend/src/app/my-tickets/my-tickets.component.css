@@ -1,0 +1,11 @@
+.non-click {
+    cursor: default;
+}
+
+.click {
+    cursor: pointer;
+}
+
+.form-select {
+    background-color: lightgrey;
+}
